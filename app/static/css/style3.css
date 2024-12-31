@@ -1,0 +1,155 @@
+
+section#goal-section {
+    color: #272727;
+    display: none;
+}
+
+.header-goal-first {
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    width: 100%;
+    max-width: 550px;
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header#goal-header {
+    width: 100%;
+    padding: 10px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(39, 39, 39);
+}
+
+.header h2 {
+    text-transform: uppercase;
+}
+
+form#goal-form label {
+    display: block;
+    padding: 13px 0 13px;
+}
+
+form#goal-form input {
+    width: 98%;
+    padding: 10px  7px 20px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgb(39, 39, 39);
+    color: rgb(39, 39, 39);
+    border-radius: 4px;
+}
+
+form#goal-form {
+    margin: 13px 0 13px;
+}
+
+.inputs-goal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(100px , 1fr));
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inputs-goal img{
+    width: 22px;
+    border-radius: 50%;
+    background:rgba(0, 0, 0, 0.822);
+}
+
+.inputs-goal .privacy{
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 4px;
+    padding: 13px 5px;
+            /* width: 210px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.inputs-goal input {
+    width: 90%;
+    padding: 10px 4px 20px;
+}
+
+.asana {
+    padding: 14px 0 14px;
+}
+
+.asana p {
+    font-size: 12px;
+}
+
+
+.k-btn {
+    border-top: 1px solid  rgb(39, 39, 39);
+    gap: 1rem;
+    position: relative;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.k-btn button {
+        position: absolute;
+        top: 10px;
+        left:0;
+        padding: 10px ;
+        font-size: .9rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border: 1px solid rgb(39, 39, 39);
+        border-radius: 4px;
+        color: rgb(39, 39, 39);
+} 
+
+.public {
+    position: absolute;
+    margin: 12px 0;
+    background-color: hsla(0, 0%, 19%, 0.925);
+    padding: 12px;
+    border-radius: 3px;
+    width: 30%;
+    display: none;
+    transition: .4s;
+    color: whitesmoke;
+}
+
+.public.active {
+    display: block;
+}
+
+.public .publics {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.public .publics p{
+    margin-left: 18px;
+    font-size: 12px;
+}
+
+.public .publics span {
+    padding-left: .2rem;
+    font-size: 13px;
+}
+
+
+.public .publics i{
+    font-size: 15px;
+}
+
+@media all and (max-width: 718px) {
+	.header-goal-first {
+		width: 400px;
+	}
+}

@@ -1,0 +1,287 @@
+
+
+.perso-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.perso-task-entry {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    display: none;
+    top: 50px;
+    z-index: 3;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+} 
+
+.tt-task-descri {
+    font-size: 12px;
+}
+
+.tt-my-task {
+    text-align: center;
+}
+.dd-my-task {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.perso-task-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.black-this-add {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    z-index: 2;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.perso-task-entry input,
+.perso-task-entry textarea {
+    width: 94%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-inline: auto;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+.perso-task-entry button:hover {
+    background-color: #45a049;
+}
+
+.perso-task-entry input[type="date"] {
+    font-size: 1rem;
+}
+
+/* Section des tâches - scroll horizontal */
+.perso-task-section {
+    margin-bottom: 30px;
+}
+
+.perso-task-list {
+    display: flex; /* Utilisation de flexbox pour aligner les cartes horizontalement */
+    overflow-x: auto;  /* Permet le défilement horizontal */
+    gap: 20px;
+    padding: 10px 10px 10px 10px;
+    scroll-snap-type: x mandatory; /* Pour un défilement fluide et naturel */
+    width: 100%;  /* Assurez-vous que la largeur prend toute la place */
+    flex-wrap: nowrap;  /* Évitez que les éléments se déplacent vers une nouvelle ligne */
+}
+
+.perso-task-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start; /* Chaque carte commence au début de la vue lors du défilement */
+    flex-shrink: 0; 
+}
+
+.perso-task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.perso-task-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.perso-task-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.each-method-to-task.delete {
+    background-color: var(--red);
+}
+.each-method-to-task.delete i {
+    color: red;
+}
+.perso-task-edit {
+    height: 100%;
+    overflow: auto;
+    top: 100%;
+    transition: all 0.3s;
+    background-color: white;
+    border-radius: 10px;
+}
+.perso-task-edit::-webkit-scrollbar {
+    width: 0px;
+}
+.perso-task-edit p {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.perso-task-edit textarea {
+    width: 75%;
+    border: 2px solid black;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+}
+.edit-task-form-message {
+    font-size: 10px;
+    margin-top: 5px;
+}
+.perso-edit-or-cancel {
+    grid-template-columns: auto 140px;
+    align-items: center;
+    gap: 20px 20px;
+}
+
+.each-method-to-task.mark-complete {
+    background-color: var(--green);
+}
+.each-method-to-task.mark-complete i {
+    color: greenyellow;
+}
+
+
+.each-method-to-task.edit {
+    background-color: var(--blue);
+}
+
+.each-method-to-task.edit i {
+    color: blue;
+}
+
+.perso-status-not-in-table {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    font-size: 10px;
+    right: 0px;
+    font-weight: bold;
+}
+
+.perso-status-in-table {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+
+.perso-status-not-in-table.en-cours,
+.perso-status-in-table.en-cours {
+    background-color: #ff9800;
+    color: white;
+}
+
+.perso-status-not-in-table.en-attente,
+.perso-status-in-table.en-attente {
+    background-color: #607d8b;
+    color: white;
+}
+
+.perso-status-not-in-table.terminé,
+.perso-status-in-table.terminé {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Section Recherche dans chaque tâche */
+.perso-search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.perso-search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 70%;
+}
+
+/* Tableau des tâches */
+.perso-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.perso-table th,
+.perso-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.perso-table th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.perso-table td {
+    background-color: #fafafa;
+}
+
+.perso-table tr:hover {
+    background-color: #f4f4f4;
+}
+
+.perso-table .perso-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.perso-table .perso-status.en-cours {
+    background-color: #ff9800;
+    color: white;
+}
+
+.perso-table .perso-status.en-attente {
+    background-color: #607d8b;
+    color: white;
+}
+
+.perso-table .perso-status.terminé {
+    background-color: #4caf50;
+    color: white;
+}

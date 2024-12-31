@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-invite {
+    background-color: white;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 3px;
+    position: absolute;
+    color: #272727;
+    top: 50%;
+    display: none;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.input {
+    color: #272727;
+    border: 1px solid #272727;
+    border-radius: 4px;
+}
+
+.input label{
+    display: block;
+    padding: 10px 0 10px;
+}
+
+
+#invite-form section {
+    color:#272727;
+    margin: 1rem 0;
+}
+
+.inputs {
+    color: #272727;
+    position: relative;
+    width: 100%;
+    margin: .4rem 0;
+    border: 1px solid #272727;
+    padding: .7rem 0 2rem ;
+    border-radius: 4px;
+
+}
+
+.inputs input[type='button'] {
+        position: absolute;
+        left: 0;
+        padding: .5rem;
+        top: 4px;
+        cursor: pointer;
+}
+
+@media all and (max-width: 718px) {
+	.header-invite {
+		width: 400px;
+	}
+}

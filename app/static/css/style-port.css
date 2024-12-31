@@ -1,0 +1,51 @@
+
+.por-container {
+    margin: auto;
+}
+
+
+.por-container-block {
+    grid-template-columns: 350px auto;
+}
+
+.each-portfolio {
+    background-color: white;
+}
+
+.each-project-asc {
+    grid-template-columns: 390px 250px 100px auto;
+}
+
+.port-table-title {
+    grid-template-columns: 390px 250px 100px auto;
+}
+
+.port-table-title p {
+    font-size: 13px;
+    font-weight: 800;
+    color: rgb(19, 117, 209);
+}
+
+.pro-status.pro-en-cours p {
+    color:rgb(19, 117, 209)
+}
+
+.pro-status.pro-termine p {
+    color:rgb(33, 236, 6);
+}
+
+.pro-pro {
+    height: 11px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #eee9e9e7;
+}
+
+.pro-pro span {
+    transition: all 1s;
+    border-radius: 10px;
+    background-color: aqua;
+    height: 12px;
+}

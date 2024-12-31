@@ -1,0 +1,168 @@
+
+.container-add-charge {
+    width: 40%;
+    position: fixed;
+    top: 60px;
+    z-index: 3;
+    left: 30%;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-add-charge form div.input-data {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+}
+.container-add-charge h2 {
+    margin: 0px 20px 20px 20px;
+    text-align: center;
+}
+.container-add-charge form input,
+.container-add-charge form textarea {
+    width: 100%;
+}
+
+.container-add-charge button {
+    width: 100%;
+    border-radius: 15px;
+    padding: 16px;
+    color: white;
+    cursor: pointer;
+    background-color: #007bff;
+}
+
+form.container-invoice-form div.input-invoice {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form.container-invoice-form input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form.container-invoice-form select {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 3px;
+} 
+
+form.container-invoice-form textarea {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 3px;
+} 
+
+form.container-invoice-form button {
+    padding: 15px 10px 15px 10px;
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    background-color: #007bff;
+    box-sizing: border-box;
+    margin-top: 3px;
+}
+
+
+form.container-invoice-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 40%;
+    z-index: 3;
+    left: 30%;
+    position: fixed;
+    top: 150px;
+}
+
+.black-facture-form {
+    width: 100%;
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.client-form, .facture-info {
+    width: 46%;
+}
+
+.container-form {
+    justify-content: space-evenly;
+}
+
+.charge-item {
+    max-width: 250px;
+    border-radius: 20px;
+    height: 210px;
+    overflow: auto;
+    margin-left: 10px;
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+}
+.charge-item::-webkit-scrollbar {
+    width: 0px;
+}
+
+.charges-lists .add-charge {
+    background-color: white;
+    min-width: 180px;
+    height: 250px;
+}
+
+.charges-lists .add-charge i {
+    font-size: 30px;
+}
+
+.charges-lists {
+    padding: 20px;
+}
+
+.charge-item .charge-amount {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.charge-des {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.charge-project-linked {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.charge-date {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.charge-title {
+    font-size: 20px;
+    font-weight: 800;
+    color:#007bff;
+    margin-bottom: 10px;
+}

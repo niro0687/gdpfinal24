@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Accueil - Gestion de projet</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="stylesheet" href="{% static 'xapp/dist/css/light-mode.css' %}" />
+		<link rel="stylesheet" href="{% static 'xapp/dist/css/x-css.css' %}" />
+		<link rel="stylesheet" href="{% static 'xapp/dist/css/x-app.css' %}" />
+		<link rel="stylesheet" href="{% static 'xapp/dist/font/font.css' %}" />
+		<link rel="stylesheet" href="{% static 'xapp/dist/fontawesome/css/all.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/gp.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style2.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style3.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/calendar.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/calendar2.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/list.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-reports.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-goal.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style-port.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/perso.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/finance.css' %}" />
+	</head> 
+	
+	<body>
+		<div id="create-new-note-box" class="x-black-02 x-child-center"></div>
+
+		<div class="change-password-box"></div>
+	
+		
+		<div id="main-page-load"></div>
+
+		<div id="edit-note-box" class="x-black-02 x-child-center"></div>
+		
+		<div id="all-task-option" class="x-black-02 x-child-center"></div>
+		
+		<div id="all-task-visual" class="x-black-02 x-child-center"></div>
+		
+		<div class="x-black-03 x-child-center" id="detailed-file"></div>
+		
+		<div id="all-invite-for-project" class="x-black-02 x-child-center"></div>
+		
+		<div id="all-conversations-box-opened" class="x-black-02 x-child-center"></div>
+		
+		<div id="all-create-conv-box" class="x-black-02 x-child-center"></div>
+		
+		<div id="all-start-conv-box" class="x-black-02 x-child-center"></div>
+		
+		<div id="all-create-group-conv" class="x-black-02 x-child-center"></div>
+
+		<div class="invoice-paper">
+
+		</div>
+
+		<a href="" id="reload-me"></a>
+		
+
+
+		<div class="visual-file-message">
+			<div class="x-circle-50 xpoab x-black-05 x-child-center xto10 xri10 x-pointer xzin2 close-file-message-visual">
+				<i class="fa fa-times xcowh"></i>
+			</div>
+			<div class="container-visual-message-file">
+				
+			</div>
+		</div>
+
+		<div class="notif-bull x-pointer x-square-63 x-child-center xbora40 x-deep-shadow xpofi">
+			<div class="x-fill-parent xpore x-child-center">
+				<i class="far fa-bell"></i>
+				<div class="xpoab notif-bagde xbora20 x-child-center x-square-25">
+					<p class="xfosi11 xfowebo">77</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="new-notif-display x-deep-shadow">
+			<p>Nandraina est le plus best in this work of the work but you are not for me</p>
+		</div>
+		
+
+		<div id="page-token" class="x-square-0 xop0">
+			{% csrf_token %}
+		</div>
+
+		<div class="notif-box hide xpofi xbora10 x-deep-shadow">
+			<div class="x-fill-parent xpore container-notif-box">
+				<p class="xfosi15 xfowebo xmato15 xmale15">Notifications</p>
+				<p class="xfosi11 x-low-emphasis xmato2 xmale15">Tous les notifications ici</p>
+					
+				<div class="all-notif-list xwi90per x-center xmato10">
+				
+				</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="soft-nav-bar xdifl xbo20 xwi100per xjucoce">
+			<div class="menu-nav-bar xbora40 xpore xdifl xjucospev x-deep-shadow xhe65 xalitce">
+				<div class="slide-show xbora50 xpoab x-square-50 x-deep-shadow"></div>
+				
+				<div class="x-child-center xpoab survol-title x-deep-shadow">
+					<div class="x-fill-parent xpore">
+						<p>Acceuil</p>
+						<div class="pointer-survol">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="each-menu-slide  x-pointer x-child-center x-square-50 xpore" id="slide-to-home" name="home" text="Acceuil">
+					<i class="fa fa-home"></i>
+				</div>
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-my-tasks" name="my-tasks" text="Mes taches">
+					<i class="far fa-check-circle"></i>
+				</div>
+				
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-my-workspace" name="my-workspace" text="Mon espace de travail">
+					<i class="far fa-bookmark"></i>
+				</div>
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-my-space" name="my-space" text="Mes tâches personnelle">
+					<i class="fa fa-toolbox"></i>
+				</div>
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-my-finance" name="my-finance" text="Finance">
+					<i class="fa fa-money-bill-alt"></i>
+				</div>
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-reporting" name="reporting" text="Rapports">
+					<i class="fa fa-chart-bar"></i>
+				</div>
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-portfolio" name="portfolio" text="Portfolio">
+					<i class="far fa-folder"></i>
+				</div>
+				<div class="each-menu-slide x-pointer x-child-center x-square-50 xpore" id="slide-to-goal" name="goal" text="Objectif">
+					<i class="far fa-flag"></i>
+				</div>
+			</div>
+	
+			<div class="all-projects-menu xmale10 xdifl xjucospev xalitce xhe65 xbora40">
+				<div id="place-here-all-project" class="xdifl">
+					
+				</div>
+				<div class="add-project x-pointer all-projects-menu-child xbora40 x-square-50 x-child-center">
+					<i class="fa fa-plus"></i>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page-loading" class="xpofi">
+			<div class="x-child-center xpore x-fill-parent">
+				<div class="load-some xwi140 xasra1 xdifl xalitce xjucospev xfldico">
+					
+					<div class="x-shimmer-loading xbora10 x-load-slower xwi30per xhe20">
+						<span></span>
+					</div>
+					
+					<div class="x-shimmer-loading xbora30 x-load-slower xwi80per xhe30">
+						<span></span>
+					</div>
+					
+					<div class="x-shimmer-loading xbora20 x-load-slower xwi50per xhe25">
+						<span></span>
+					</div>
+					
+					<div class="x-shimmer-loading xbora10 x-load-slower xwi60per xhe10">
+						<span></span>
+					</div>
+					
+				</div>
+				<div class="xpoab xbo10 xhe30 x-child-center">
+					<p id="preparation" class="x-low-emphasis xfosi11 xfowebo">Préparation des données...</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="xopfi notif-sounds">
+			<audio src="{% static 'audio/message_pop.mp3' %}" controls="" id="new-message-sound"></audio>
+			<audio src="{% static 'audio/new_message.wav' %}" controls="" id="message-pop-sound"></audio>
+		</div>
+		
+		<div class="header-invite x-deep-shadow xbora20 xovhi" id="invite-to-join-pro">
+	        
+	    </div>
+	    
+		
+		<header class="xpofi xdigr xalitce xto0 xhe50 xwi100per xri0 xle0 xzin2" id="main-header">
+			<div class="option-and-create xdifl xalitce">
+				<div class="option x-child-center xmale10 x-square-45 x-pointer">
+					<i class="fa fa-bars xcowh xfosi20"></i>
+				</div>
+				
+				<div class="create xdifl xalitce xmale10 xbora20 x-pointer">
+					<div class="icon-create x-child-center x-circle-25">
+						<i class="fa fa-plus"></i>
+					</div>
+					<p class="xcowh xfowebo xfosi12">Créer</p>
+				</div>
+			</div>
+			
+			<div class="search xhe30 x-child-center">
+				<div class="search-input xhe25 xalitce xbora30 xpa7 xdigr">
+					<div class="icon-search x-child-center x-square-25">
+						<i class="fa fa-search xcowh"></i>
+					</div>
+					<input type="text" class="xcowh xfowebo draft-search" placeholder="Rechercher...">
+				</div>
+			</div>
+			
+			<div class="user-option xdifl xjucoflen">
+				<div class="x-pointer profile-arrow xmari15 xdifl xalitce">
+					<div class="x-square-35" id="profile-on-header">
+						
+					</div>
+					<div class="icon-down xmale10">
+						<i class="fa fa-chevron-down xcowh"></i>
+					</div>
+				</div>
+			</div>	
+			
+		</header>
+		
+		
+		<div id="add-new-global-task" class="xpofi x-black-02 xto0 xle0 xbo0 xri0 xwi100per x-child-center">
+			<div class="container-global-task xbora5 x-deep-shadow">
+				<div class="header-global-task x-bd-bottom x-bd-thin xhe50 xdifl xalitce">
+					<div class="xwi70per">
+						<p class="xmale20 xfowebo">Nouvelle tâche</p>
+					</div>
+					<div class="xwi30per xdifl xjucofl-en">
+						<div class="x-circle-30 xmari10 btn-close-add-new-task x-pointer x-child-center">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+				</div>
+			
+				<div class="xwi100per xpato30" id="section-global-task">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="settings-box" class="xpofi x-black-02 xto0 xbo0 xle0 xbo0 xri0 xwi100per x-child-center">
+			<div class="container-settings-box xpore x-deep-shadow xbora5">
+					
+				<div class="x-close-add-project btn-close-settings x-black-02 x-circle-40 x-child-center xpoab xto15 xri15 x-pointer">
+					<i class="fa fa-times"></i>
+				</div>
+				
+				<div class="its-container x-fill-parent">
+					 <div class="profils">
+				        
+				    </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="user-option-box x-deep-shadow xpofi xto55 xri10 xbora10 xwi250">
+			
+			<div id="my-pic" class="x-center x-child-center xwi100per xmato30 xmabo20">
+				
+			</div>
+			
+			<p class="xtealce xfosi15 xfowebo xmabo5">Mon espace de travail</p>
+			<p id="my-email-on-side-bar" class="x-low-emphasis xtealce xfosi12 xfowebo"></p>
+			
+			<div class="section-user-option xpato5 xpabo5 xmato10">
+				
+				<div class="each-option-user btn-open-my-note x-pointer xhe40 xwi95per x-center xdigr xalitce">
+					<div class="x-child-center x-circle-40">
+						<i class="fa fa-book xfosi20"></i>
+					</div>
+					<div>
+						<p class="xfosi13">Mes notes</p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="section-user-option x-bd-top x-bd-thin xpato5 xpabo5">
+				<div class="each-option-user btn-open-profile x-pointer xhe40 xwi95per x-center xdigr xalitce">
+					<div class="x-child-center x-circle-40">
+						<i class="far fa-user-circle xfosi20"></i>
+					</div>
+					<div>
+						<p class="xfosi13">Profile</p>
+					</div>
+				</div>
+				
+				<div class="each-option-user btn-open-settings x-pointer xhe40 xwi95per x-center xdigr xalitce">
+					<div class="x-child-center x-circle-40">
+						<i class="fa fa-cog xfosi20"></i>
+					</div>
+					<div>
+						<p class="xfosi13">Paramètres</p>
+					</div>
+				</div>
+
+				<div class="each-option-user btn-open-change-password x-pointer xhe40 xwi95per x-center xdigr xalitce">
+					<div class="x-child-center x-circle-40">
+						<i class="fa fa-lock xfosi20"></i>
+					</div>
+					<div>
+						<p class="xfosi13">Mots de passe</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="section-user-option x-bd-thin x-bd-top xpabo10">
+				
+				<div class="each-option-user logout-user x-pointer xhe40 xwi95per x-center xdigr xalitce">
+					<div class="x-child-center x-circle-40">
+						<i class="fa fa-sign-out xfosi20"></i>
+					</div>
+					<div>
+						<p class="xfosi13">Se déconnecter</p>
+						<a href="{% url 'app:logout' %}" class="log-me-out xop0 x-square-0 xfosi0"></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="add-new-project-box" class="xpofi xto0 xbo0 xle0 xri0">
+			<div class="xpore x-fill-parent x-child-center">
+				
+				<div class="x-close-add-project btn-close-add-new-project x-black-02 x-circle-40 x-child-center xpoab xto15 xri15 x-pointer">
+					<i class="fa fa-times"></i>
+				</div>
+				
+				<div class="container-add-project x-deep-shadow xbora10"></div>
+			</div>
+		</div>
+		
+		<div class="add-insi-box x-deep-shadow xwi200 xbora5 xpa10 xpofi xto0">
+			
+			<div class="each-method-to-add xhe40 xdigr xalitce">
+				<div class="x-child-center xwi50">
+					<i class="fa fa-chart-bar xfosi20"></i>
+				</div>
+				<p class="xfosi13">Nouvel dashboard</p>
+			</div>
+			<div class="each-method-to-add xhe40 xdigr xalitce">
+				<div class="x-child-center xwi50">
+					<i class="far fa-folder xfosi20"></i>
+				</div>
+				<p class="xfosi13">Nouvel portfolio</p>
+			</div>
+			<div class="each-method-to-add btn-add-goal xhe40 xdigr xalitce">
+				<div class="x-child-center xwi50">
+					<i class="fa fa-flag xfosi20"></i>
+				</div>
+				<p class="xfosi13">Nouvel objectif</p>
+			</div>
+		</div>
+		
+		<div class="add-project-box xwi200 xpa10 xbora6 x-deep-shadow xpofi xto0">
+			<div class="each-method-to-add btn-open-add-new-project xhe40 xdigr xalitce x-pointer">
+				<div class="x-child-center xwi50">
+					<i class="fa fa-rocket xfosi20"></i>
+				</div>
+				<p class="xfosi13">Nouveau projet</p>
+			</div>
+			
+		</div>
+		
+		<div class="create-box xbora5 xpa10 xwi200 x-deep-shadow xpofi xto50">
+			
+			
+			<div class="each-method-to-add btn-open-add-new-project  xhe40 xdigr xalitce x-pointer">
+				<div class="x-child-center xwi50">
+					<i class="fa fa-rocket xfosi20"></i>
+				</div>
+				<p class="xfosi13">Nouveau projet</p>
+			</div>
+			
+			<div class="each-method-to-add btn-invite-team xhe40 xdigr xalitce x-pointer">
+				<div class="x-child-center xwi50">
+					<i class="far fa-user-circle xfosi20"></i>
+				</div>
+				<p class="xfosi13">Inviter</p>
+			</div>
+		</div>
+	
+		
+		<div class="search-bar xpofi xto0 x-deep-shadow xbora10" id="search-bar">
+			
+		</div>
+		
+		<div id="black"></div>
+		
+		<!-- side bar -->
+		
+		<div class="main-page xzin1 closed xpofi xto50 xbo0">
+			<div class="x-fill-parent xpore">
+				
+				<!-- reporting -->
+				<div id="reporting" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!-- end reporting -->
+				
+				<!-- portfolio -->
+				
+				<div id="portfolio" class="main-not-focused main-section xpoab">
+					
+				</div>
+				
+				<!-- end portfolio -->
+				
+				
+				
+				<!-- goal -->
+				<div id="goal" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!-- end goal -->
+				
+				<!-- my note -->
+				<div id="my-note" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!-- end my note -->
+				
+				<!-- project --> 
+				<div id="project-visualisation" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!-- end project -->
+				
+				
+				<!-- profile -->
+				<div id="profile" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!-- end profile -->
+				
+				<!-- finance -->
+				<div id="my-finance" class="main-not-focused main-section xpoab">
+					<div class="present-animated xmato50 xmabo50 xdifl x-center x-child-center">  
+						<div class="first-appear x-bd-right xpari20 x-bd-medium">
+							<p class="votre xfosi50 xfowebo xmabo5">Votre</p>
+							<p class="module xfosi45 xfowebo xmabo5">Module</p>
+							<p class="finance xfosi40 xfowebo">Financiere</p>
+						</div>
+						<div class="second-appear xpale20">
+							<p class="creer xfosi30 xfowebo xmabo8">Créer des factures pour votre client.</p>
+							<p class="send xfosi30 xfowebo xmabo8">Envoyer par email ou télécharger en PDF.</p>
+							<p class="gerer xfosi30 xfowebo">Gérer votre charge financiere.</p>
+						</div>
+					</div>
+				
+					<div class="main-finance xwi100per xop0">
+						
+						
+					</div>
+				</div>
+				<!-- end finance -->
+
+
+				<!-- my Workspaces -->
+				<div id="my-workspace" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!--my Workspaces -->
+				
+				<!-- my space -->
+				<div id="my-space" class="main-not-focused main-section xpoab">
+
+				</div>
+				<!-- end space -->
+
+				<!-- home page -->
+				<div id="home" class="main-focused main-section xpoab">
+					
+					
+				</div>
+				
+				<!-- end home page -->
+				
+				
+				<!-- inbox page -->
+				<div id="inbox" class="main-not-focused main-section xpoab">
+					<p>Inbox</p>
+				</div>
+				<!-- end inbox -->
+				
+				
+				<!-- my task page -->
+				<div id="my-tasks" class="main-not-focused main-section xpoab">
+					
+				</div>
+				<!-- end my tasks -->
+				
+				
+			</div>
+		</div>
+		
+		<script src="{% static 'xapp/dist/js/jquery-3.6.0.min.js' %}"></script>
+		<script src="{% static 'xapp/dist/js/x-app.js' %}"></script>
+		<script src="{% static 'chartJs/dist/chart.umd.js' %}"></script>
+		<script src="{% static 'xapp/dist/react/umd/react.production.min.js' %}"></script>
+		<script src="{% static 'xapp/dist/react-dom/umd/react-dom.production.min.js' %}"></script>
+    	<script src="{% static 'xapp/dist/prop-types/prop-types.js' %}"></script>
+    	<script src="{% static 'xapp/dist/js/x-composants.production.js' %}"></script>
+    	<script src="{% static 'xapp/dist/js/x-chat.production.js' %}"></script>
+		<script src="{% static 'jspdf/dist/jspdf.umd.js' %}"></script>
+		<script src="{% static 'js/qrcode.min.js' %}"></script>
+    	<script src="{% static 'js/html2canvas.min.js' %}"></script>
+    	<script src="{% static 'js/gp.js' %}"></script>
+    	<script src="{% static 'js/gp-jsx.production.js' %}"></script>
+	</body>
+</html>

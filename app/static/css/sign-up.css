@@ -1,0 +1,13 @@
+
+
+#test {
+    padding: 50px;
+    width: 650px;
+    background-color: rgb(245, 244, 244);
+}
+
+.init-container {
+    display: grid;
+    grid-template-columns: auto 330px;
+    gap: 20px;
+}

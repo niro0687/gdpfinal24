@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Password Recovery</title>
+<style>
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.code-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.code {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Récupération de mot de passe</h1>
+    <p>Bonjour {{ name }},</p>
+    <p>Vous avez demandé une réinitialisation du mot de passe de votre compte sur Gestion de projet.</p>
+    <p>Voici votre code de récupération:</p>
+    <div class="code-container">
+        <p class="code">{{ code }}</p>
+    </div>
+    
+    <p>Si vous n'avez pas demandé de réinitialisation de mot de passe, veuillez ignorer cet e-mail.</p>
+    <p>Sincèrement,</p>
+    <p>L'équipe de Gestion de projet.</p>
+</div>
+</body>
+</html>

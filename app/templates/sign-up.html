@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'xapp/dist/css/light-mode.css' %}" />
+    <link rel="stylesheet" href="{% static 'xapp/dist/css/x-css.css' %}" />
+    <link rel="stylesheet" href="{% static 'xapp/dist/css/x-app.css' %}" />
+    <link rel="stylesheet" href="{% static 'xapp/dist/font/font.css' %}" />
+    <link rel="stylesheet" href="{% static 'xapp/dist/fontawesome/css/all.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/sign-up.css' %}">
+
+    <title>Inscription - Gestion de projet</title>
+</head>
+<body>
+
+    <form action="" class="token">
+        {% csrf_token %}
+    </form>
+    <a href="{% url 'app:home' %}" id="auth-me"></a>
+
+    <div id="test" class="x-shadow xbora15 x-center xmato90">
+        <h2 class="xtealce xmabo10">Inscription</h2>
+        <p class="x-low-emphasis xfosi12 xfowebo xtealce">Pour créer une nouveau compte, veuillez remplir tous le champs.</p>
+        <div class="init-container xmato40">
+
+        </div>
+
+        <div class="x-child-center xmato20">
+            <a href="{% url 'app:auth' %}" class="x-text-info xfowebo xfosi13">J'ai déja une compte - Me connecter</a>
+        </div>
+        
+    </div>
+    
+    <script src="{% static 'xapp/dist/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'xapp/dist/js/x-app.js' %}"></script>
+    <script src="{% static 'xapp/dist/react/umd/react.production.min.js' %}"></script>
+    <script src="{% static 'xapp/dist/react-dom/umd/react-dom.production.min.js' %}"></script>
+    <script src="{% static 'xapp/dist/prop-types/prop-types.js' %}"></script>
+    <script src="{% static 'xapp/dist/js/x-composants.production.js' %}"></script>
+    <script src="{% static 'js/sign-up-jsx.production.js' %}"></script>
+</body>
+</html>

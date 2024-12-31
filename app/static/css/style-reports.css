@@ -1,0 +1,36 @@
+
+
+.main-rapport {
+    grid-template-columns: 350px auto;
+}
+
+
+.each-rapport {
+    background: white;
+    padding: 20px;
+}
+
+.each-rapport .projet-progress {
+    background-color: rgba(225, 226, 228, 0.89);
+    height: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.each-rapport .title-for-rapport strong {
+    color: rgb(23, 146, 247);
+}
+
+.each-rapport .projet-progress span {
+    border-radius: 10px;
+    transition: all 1s;
+    background: rgb(94, 59, 177);
+    height: 12px;
+}
+
+.each-rapport .each-task {
+    align-items: center;
+    grid-template-columns: auto 200px 50px 200px 100px;
+}

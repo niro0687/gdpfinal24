@@ -1,0 +1,20 @@
+
+#container-auth {
+    width: 100%;
+}
+
+#container-auth::-webkit-scrollbar {
+    width: 0px;
+}
+
+#auth-form {
+    background-color: rgb(250, 247, 247);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+form.fake-form {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
